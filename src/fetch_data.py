@@ -7,9 +7,6 @@ logging.basicConfig(level=logging.INFO)
 BASE_URL = "https://api.open-meteo.com/v1/forecast"
 
 def fetch_weather(latitude: float, longitude: float, days: int = 7):
-    """
-    Fetch weather forecast data from Open-Meteo API
-    """
 
     params = {
         "latitude": latitude,
@@ -45,7 +42,6 @@ def fetch_weather(latitude: float, longitude: float, days: int = 7):
     except Exception as e:
         logging.error(f"Unexpected error: {e}")
         return None
-
 
 if __name__ == "__main__":
     data = fetch_weather(12.97, 77.59)  # Example Bangalore
