@@ -20,5 +20,4 @@ def transform_weather(raw_data: dict):
     )
 
     df = df.fillna(0)
-
     return df
